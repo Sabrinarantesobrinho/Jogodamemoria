@@ -9,8 +9,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: auto;
+    height: 100vh; /* Define a altura da página */
     background-color: rgb(152, 178, 212);
+    overflow-x: hidden; /* Evita barra de rolagem horizontal */
 }
 
 .game-container {
@@ -19,7 +20,11 @@ body {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 100%; /* Garante que o conteúdo se ajuste */
+    width: 100%;
+    overflow: hidden; /* Esconde qualquer conteúdo extra */
 }
+
 
 h1 {
     font-size: 24px;
