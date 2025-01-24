@@ -1,0 +1,84 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(152, 178, 212);
+}
+
+.game-container {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: rgb(218, 22, 22);
+    font-family: "Luckiest Guy", serif;
+    font-weight: 400;
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(4, 150px);
+    gap: 10px;
+    justify-content: center;
+}
+
+.card {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(247, 243, 38);
+    border-radius: 8px;
+    cursor: pointer;
+    transform: scale(1);
+    transition: transform 0.3s;
+    position: relative;
+}
+
+.card.flipped {
+    background-color: transparent;
+    transform: scale(1.1);
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+    border-radius: 8px;
+}
+
+.card.flipped img {
+    display: block;
+}
+
+.card.matched {
+    background-color: #2ecc71;
+    cursor: not-allowed;
+}
+
+.card:active {
+    transform: scale(0.95);
+}
+
+#message {
+    font-size: 18px;
+    margin-top: 20px;
+    font-weight: bold;
+}
