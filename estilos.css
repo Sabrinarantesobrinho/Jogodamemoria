@@ -104,10 +104,30 @@ h1 {
     }
 }
 
+/* Media Query para telas menores (como em dispositivos móveis) */
+@media (max-width: 768px) {
+    .game-board {
+        grid-template-columns: repeat(3, 120px); /* Ajusta para 3 colunas em telas menores */
+    }
+
+    .card {
+        width: 120px;
+        height: 120px;
+    }
+
+    h1 {
+        font-size: 20px; /* Reduz o tamanho do título em telas menores */
+    }
+
+    #message {
+        font-size: 16px; /* Ajusta o tamanho da mensagem */
+    }
+}
+
 /* Media Query para telas muito pequenas (ex: smartphones em modo retrato) */
 @media (max-width: 480px) {
     .game-board {
-        grid-template-columns: repeat(2, 100px); /* Ajusta para 2 colunas em telas muito pequenas */
+        grid-template-columns: repeat(3, 100px); /* Ajusta para 2 colunas em telas muito pequenas */
     }
 
     .card {
